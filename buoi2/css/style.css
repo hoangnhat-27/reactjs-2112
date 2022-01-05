@@ -5,14 +5,13 @@
     margin: 0;
 }
 
-.container {
-    border: 1px solid #000;
-    padding-left: 280px;
+body {
+    height: 100vh;
 }
 
 .header {
-    height: 200px;
-    width: 800px;
+    height: 25%;
+    width: 100%;
     background-image: url("../img/Cities.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -24,59 +23,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: inherit;
-}
-
-
-/* example 2 */
-
-.header2 {
-    height: auto;
-    width: 800px;
-    background-color: rgb(87, 74, 74);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.header2 .banner-img,
-.header2 div {
-    width: 100%;
-    height: 100%;
-}
-
-.header2 div {
-    position: relative;
-}
-
-.header2 .title {
-    position: absolute;
-    z-index: 0;
-    top: 35%;
-    left: 40%;
-}
-
-.header2 h2 {
-    color: white;
-    font-size: 36px;
+    height: -webkit-fill-available;
 }
 
 .main {
-    height: 450px;
-    width: 800px;
+    height: 50%;
+    width: 100%;
     background-color: rgb(122, 81, 81);
     display: flex;
 }
 
 .main .content-left {
     background-color: rgb(14, 80, 119);
-    height: 100%;
+    height: auto;
     width: 25%;
 }
 
 .main .content-right {
     background-color: rgb(5, 6, 51);
-    height: 100%;
+    height: auto;
     width: 75%;
 }
 
@@ -118,21 +83,22 @@ ul li a {
 .image {
     display: flex;
     justify-content: center;
+    padding: 0;
 }
 
 img {
     width: 300px;
-    padding-top: 15px;
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
+    padding: 10px 0;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
 }
 
 .footer {
-    height: 150px;
-    width: 800px;
+    height: 25%;
+    width: 100%;
     color: white;
     font-size: 36px;
     display: flex;
@@ -141,4 +107,45 @@ img {
     background-image: url("../img/Cities.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+
+/* responsive */
+
+.container {
+    width: 55%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 100%;
+        /* height: 100vh; */
+    }
+}
+
+@media screen and (min-width: 740px) and (max-width: 1023px) {
+    .container {
+        width: 100%;
+        margin: 0;
+        height: 100%;
+    }
+}
+
+@media (max-width: 740px) {
+    .container {
+        width: 100%;
+    }
+    ul {
+        display: flex;
+    }
+    .content-left {
+        display: block;
+        width: 100%;
+        height: 100px;
+    }
+    .content-right {
+        display: block;
+    }
 }
